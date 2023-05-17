@@ -114,7 +114,7 @@ html{
     align-items: center;
     gap: 24px;
 
-    background-color: red;
+    background-color: var(--secondary);
 }
 
 .title{
