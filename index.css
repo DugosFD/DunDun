@@ -106,7 +106,7 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 60px;
 }
 
 .data{
@@ -131,6 +131,10 @@ html{
     color: var(--secondary);
 
     text-align: center;
+}
+
+.info > span{
+    font-size: 30px;
 }
 
 #description-box{
