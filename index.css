@@ -106,10 +106,10 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 32px;
 }
 
 .data{
-    background-color: red;
     width: 200px;
     height: 120px;
     margin: 20px 0;
@@ -118,6 +118,12 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 12px;
+}
+
+.data img{
+    width: 75px;
+    height: 75px;
 }
 
 .info{
