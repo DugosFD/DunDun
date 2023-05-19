@@ -174,8 +174,6 @@ html{
 }
 
 .text{
-    margin: 0 20px;
-
     font-size: var(--m);
     font-weight: 300;
     color: var(--text-color);
@@ -184,13 +182,13 @@ html{
 
 #characteristics-container{
     width: 100vw;
-    padding: 32px 16px;
+    padding: 32px 8px;
 
     background-color: var(--secondary);
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     gap: 32px;
 
@@ -198,10 +196,9 @@ html{
 }
 
 .characteristic-box{
-    width: 150px;
+    width: 200px;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 12px;
 }
@@ -209,14 +206,16 @@ html{
 .characteristic-box > img{
     width: 50px;
     height: 40px;
-    
+}
+
+.characteristic-box:nth-child(2) > img, .characteristic-box:nth-child(3) > img{
     filter: contrast(0);
 }
 
 .characteristic-box > p{
     font-size: var(--xs);
     color: var(--text-color);
-    text-align: center;
+    text-align: start;
 }
 
 #technical-tests-container{
@@ -228,7 +227,7 @@ html{
     align-items: center;
     gap: 4px;
 
-    background-color: var(--secondary);
+    background-color: rgba(241, 241, 241);
 
     border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
@@ -246,9 +245,30 @@ html{
 }
 
 #technical-tests-container > p:first-of-type{
-    margin: 24px;
+    margin: 24px 0px;
     font-style: italic;
     text-align: start;
+}
+
+#more-info{
+    align-self: start;
+    margin-top: 28px;
+    padding: 12px;
+
+    background-color: var(--secondary);
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+}
+
+#more-info > a{
+    font-size: var(--xs);
+    font-weight: bolder;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+#more-info > a:visited{
+    color: var(--primary);
 }
 
 #GBC-container{
