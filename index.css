@@ -6,13 +6,15 @@
     --secondary-2: rgb(255, 122, 1);
     --text-color: rgb(100, 100, 100);
 
+    --xxxs: clamp(0.8rem, 1.6vw, 1rem);
     --xxs: clamp(1rem, 2vw, 1.25rem);
     --xs: clamp(1.2rem, 2.4vw, 1.5rem);
     --s: clamp(1.4rem, 2.8vw, 1.75rem);
     --m: clamp(1.6rem, 3.2vw, 2rem);
     --l: clamp(1.8rem, 3.6vw, 2.25rem);
     --xl: clamp(2rem, 4vw, 2.5rem);
-    --xxl: clamp(2.2rem, 4.4vw, 2.75rem);
+    --xxl: clamp(2.4rem, 4.8vw, 30rem);
+    --xxxl: clamp(2.8rem, 5.6vw, 3.5rem);
 }
 
 html{
@@ -29,7 +31,7 @@ html{
 
 /* Mobile design */
 
-#top-bar{
+#topBar{
     width: 100vw;
     height: 75px;
 
@@ -45,14 +47,14 @@ html{
     margin: 32px;
 }
 
-#menu-button{
+#botonMenu{
     margin: 32px;
 
     background: none;
     border: none;
 }
 
-#menu-button i{
+#botonMenu i{
     font-size: 28px;
     color: var(--primary);
 }
@@ -83,14 +85,14 @@ html{
 }
 
 #menu li > a{
-    font-size: var(--s);
+    font-size: var(--m);
     color: var(--text-color);
     text-decoration: none;
 }
 
 #portada{
     width: 100%;
-    height: clamp(200px, 55vw, 55vw);
+    height: clamp(200px, 55vw, 600px);
 }
 
 #portada > img{
@@ -99,7 +101,7 @@ html{
 
 }
 
-#benefits-container{
+#contenedorBeneficios{
     width: 100vw;
 
     background-color: var(--primary);
@@ -110,7 +112,7 @@ html{
     align-items: center;
 }
 
-.benefit-box{
+.cajaBeneficio{
     width: 200px;
     margin: 28px 0;
 
@@ -121,7 +123,7 @@ html{
     gap: 12px;
 }
 
-.benefit-box > img{
+.cajaBeneficio > img{
     width: 75px;
     height: 75px;
 }
@@ -131,19 +133,20 @@ html{
     color: var(--secondary);
 
     text-align: center;
+    line-height: 24px;
 }
 
 .info > span{
     font-size: 30px;
 }
 
-#descriptions-container{
+#contenedorDescripciones{
     width: 100vw;
 
     background-color: var(--secondary);
 }
 
-.description-box{
+.cajaDescripcion{
     width: 100%;
     padding: 32px 16px;
 
@@ -156,31 +159,33 @@ html{
     border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 
-.title{
+.titulo{
     margin: 0 20px;
 
     font-size: var(--xl);
     font-weight: 500;
     text-align: center;
+    line-height: 28px;
 }
 
-.description-box > .title{
+.cajaDescripcion > .titulo{
     color: var(--text-color);
 }
 
-.description-box > .title > span{
+.cajaDescripcion > .titulo > span{
     color: var(--secondary-2);
     font-weight: 600;
 }
 
-.text{
+.texto{
     font-size: var(--m);
     font-weight: 300;
     color: var(--text-color);
     text-align: center;
+    line-height: 24px;
 }
 
-#characteristics-container{
+#contenedorCaracteristicas{
     width: 100vw;
     padding: 32px 8px;
 
@@ -195,7 +200,7 @@ html{
     border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 
-.characteristic-box{
+.cajaCaracteristica{
     width: 200px;
 
     display: flex;
@@ -203,22 +208,24 @@ html{
     gap: 12px;
 }
 
-.characteristic-box > img{
+.cajaCaracteristica > img{
     width: 50px;
     height: 40px;
 }
 
-.characteristic-box:nth-child(2) > img, .characteristic-box:nth-child(3) > img{
+.cajaCaracteristica:nth-child(2) > img, .cajaCaracteristica:nth-child(3) > img{
     filter: contrast(0);
 }
 
-.characteristic-box > p{
+.cajaCaracteristica > p{
     font-size: var(--xs);
+    font-weight: bold;
     color: var(--text-color);
+    opacity: .8;
     text-align: start;
 }
 
-#technical-tests-container{
+#contenedorPruebas{
     width: 100vw;
     padding: 32px 16px;
 
@@ -232,46 +239,62 @@ html{
     border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 
-#technical-tests-container > h2{
+#contenedorPruebas > h2{
     color: var(--primary);
 }
 
-#technical-tests-container > h2 > span{
+#contenedorPruebas > h2 > span{
     font-weight: bolder;
 }
 
-#technical-tests-container > p{
+#contenedorPruebas > p{
     align-self: start;
 }
 
-#technical-tests-container > p:first-of-type{
+#contenedorPruebas > p:first-of-type{
     margin: 24px 0px;
     font-style: italic;
     text-align: start;
 }
 
-#more-info{
+#botonSaberMas{
     align-self: start;
     margin-top: 28px;
     padding: 12px;
 
-    background-color: var(--secondary);
-    border: 1px solid var(--primary);
-    border-radius: 20px;
-}
-
-#more-info > a{
     font-size: var(--xs);
     font-weight: bolder;
     color: var(--primary);
     text-decoration: none;
+
+    border: 1px solid var(--primary);
+    border-radius: 20px;
 }
 
-#more-info > a:visited{
+#botonSaberMas:visited{
     color: var(--primary);
 }
 
-#GBC-container{
+#contenedorInstituciones{
+    padding: 32px 8px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 32px;
+
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+#contenedorInstituciones > img{
+    min-width: 30px;
+    max-height: 40px;
+
+    filter: grayscale(1);
+    opacity: .8;
+}
+
+#contenedorGBC{
     width: 100vw;
     padding: 32px 16px;
     
@@ -281,15 +304,15 @@ html{
     gap: 20px;
 }
 
-#GBC-container > p{
+#contenedorGBC > p{
     font-size: var(--s);
 }
 
-#GBC-container > img{
+#contenedorGBC > img{
     width: 120px;
 }
 
-#rewards-container{
+#contenedorPremios{
     width: 100vw;
 
     background-color: var(--primary);
@@ -300,7 +323,7 @@ html{
     gap: 20px;
 }
 
-.reward-box{
+.cajaPremio{
     width: 100%;
     padding: 60px 16px;
 
@@ -310,11 +333,55 @@ html{
     gap: 40px;
 }
 
-.reward-box > .title{
+.cajaPremio > .titulo{
     font-size: var(--xxl);
-    color: var(--secondary);
+    color: rgb(238, 213, 174);
 }
 
-.reward-box > .text{
-    color: var(--secondary);
+.cajaPremio > .texto{
+    color: rgb(238, 213, 174);
+}
+
+#contenedorTecnologiaFCC{
+    padding: 32px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+}
+
+.cajaInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.cajaInfo > h2 > span{
+    font-weight: bold;
+    color: var(--secondary-2);
+}
+
+.cajaDatos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.cajaDatos > p:first-child{
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    
+    border-bottom: 2px solid var(--secondary-2);
+    border-right: 1px solid var(--secondary-2);
+
+    border-radius: 25px;
+}
+
+.cajaDatos > p:last-child{
+    font-size: var(--s);
+    font-weight: bold;
 }
