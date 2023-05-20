@@ -412,7 +412,7 @@ footer{
     gap: 20px;
 }
 
-.cajaFCC > img{
+.cajaFCC > a > img{
     padding-right: 12px;
     width: 65px;
     opacity: .8;
