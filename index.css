@@ -13,7 +13,7 @@
     --m: clamp(1.6rem, 3.2vw, 2rem);
     --l: clamp(1.8rem, 3.6vw, 2.25rem);
     --xl: clamp(2rem, 4vw, 2.5rem);
-    --xxl: clamp(2.4rem, 4.8vw, 30rem);
+    --xxl: clamp(2.4rem, 4.8vw, 3rem);
     --xxxl: clamp(2.8rem, 5.6vw, 3.5rem);
 }
 
@@ -197,7 +197,6 @@ html{
     align-items: center;
     gap: 32px;
 
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 
 .cajaCaracteristica{
@@ -234,21 +233,24 @@ html{
     align-items: center;
     gap: 4px;
 
-    background-color: rgba(241, 241, 241);
+    background-color: var(--primary);
 
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 
 #contenedorPruebas > h2{
-    color: var(--primary);
+    color: var(--secondary);
+    opacity: .8;
 }
 
 #contenedorPruebas > h2 > span{
     font-weight: bolder;
+    color: var(--secondary-2);
 }
 
 #contenedorPruebas > p{
     align-self: start;
+    color: var(--secondary);
+    opacity: .8;
 }
 
 #contenedorPruebas > p:first-of-type{
@@ -264,18 +266,19 @@ html{
 
     font-size: var(--xs);
     font-weight: bolder;
-    color: var(--primary);
+    color: var(--secondary);
     text-decoration: none;
 
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
     border-radius: 20px;
 }
 
 #botonSaberMas:visited{
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 #contenedorInstituciones{
+    width: 100vw;
     padding: 32px 8px;
 
     display: flex;
@@ -335,20 +338,23 @@ html{
 
 .cajaPremio > .titulo{
     font-size: var(--xxl);
-    color: rgb(238, 213, 174);
+    color: var(--secondary);
 }
 
 .cajaPremio > .texto{
-    color: rgb(238, 213, 174);
+    color: var(--secondary);
 }
 
 #contenedorTecnologiaFCC{
+    width: 100vw;
     padding: 32px 16px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 44px;
+
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 
 .cajaInfo{
@@ -384,4 +390,93 @@ html{
 .cajaDatos > p:last-child{
     font-size: var(--s);
     font-weight: bold;
+}
+
+footer{
+    width: 100vw;
+    padding: 32px 16px 8px;
+
+    background-color: var(--secondary-2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cajaFCC{
+    margin-bottom: 60px;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cajaFCC > img{
+    padding-right: 12px;
+    width: 65px;
+    opacity: .8;
+
+    border-right: 1px solid var(--secondary);
+}
+
+.cajaFCC > p{
+    font-size: var(--xs);
+    font-weight: bold;
+
+    color: var(--secondary);
+    opacity: .8;
+    
+    text-align: start;
+}
+
+.cajaContacto{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cajaContacto > i{
+    font-size: var(--xxl);
+    color: var(--secondary);
+    opacity: .8;
+}
+
+.cajaContacto > a{
+    color: var(--secondary);
+    opacity: .8;
+
+    text-decoration: none;
+}
+
+.cajaContacto > a:visited{
+    color: var(--secondary);
+}
+
+.cajaContacto > p{
+    color: var(--secondary);
+    opacity: .8;
+}
+
+.cajaRedes{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cajaRedes > a{
+    font-size: var(--xxl);
+    color: var(--secondary);
+    opacity: .8;
+}
+
+.cajaRedes > a:visited{
+    color: var(--secondary);
+}
+
+#copyright{
+    font-size: var(--xs);
+
+    color: black;
+    opacity: .8;
 }
