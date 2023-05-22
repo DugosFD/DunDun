@@ -1,0 +1,194 @@
+/* Vars and base styles */
+
+:root{
+    --primary: rgb(0, 46, 120);
+    --secondary: rgb(255, 255, 255);
+    --secondary-2: rgb(255, 122, 1);
+    --text-color: rgb(100, 100, 100);
+
+    --xxxs: clamp(0.8rem, 1.6vw, 1rem);
+    --xxs: clamp(1rem, 2vw, 1.25rem);
+    --xs: clamp(1.2rem, 2.4vw, 1.5rem);
+    --s: clamp(1.4rem, 2.8vw, 1.75rem);
+    --m: clamp(1.6rem, 3.2vw, 2rem);
+    --l: clamp(1.8rem, 3.6vw, 2.25rem);
+    --xl: clamp(2rem, 4vw, 2.5rem);
+    --xxl: clamp(2.4rem, 4.8vw, 3rem);
+    --xxxl: clamp(2.8rem, 5.6vw, 3.5rem);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Mobile design */
+
+#topBar{
+    width: 100vw;
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: var(--secondary);
+}
+
+.logo{
+    width: 65px;
+    margin: 32px;
+}
+
+#botonMenu{
+    margin: 32px;
+
+    background: none;
+    border: none;
+}
+
+#botonMenu i{
+    font-size: 28px;
+    color: var(--primary);
+}
+
+#menu{
+    width: 100vw;
+    margin: 16px 0;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    background-color: var(--secondary);
+
+    list-style: none;
+}
+
+#menu > li{
+    width: 90%;
+    height: 35px;
+
+    display: flex;
+    align-items: start;
+
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+#menu li > a{
+    font-size: var(--m);
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#portada{
+    width: 100%;
+    height: clamp(200px, 55vw, 600px);
+}
+
+#portada > img{
+    width: inherit;
+    height: inherit;
+
+}
+
+.titulo{
+    margin: 0 20px;
+
+    font-size: var(--xl);
+    font-weight: 500;
+    text-align: center;
+    line-height: 28px;
+}
+
+.texto{
+    font-size: var(--m);
+    font-weight: 300;
+    color: var(--text-color);
+    text-align: center;
+    line-height: 24px;
+}
+
+footer{
+    width: 100vw;
+    padding: 32px 16px 8px;
+
+    background-color: var(--secondary-2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cajaFCC{
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.cajaFCC > a > img{
+    width: 65px;
+    opacity: .8;
+    animation-iteration-count: infinite;
+}
+
+.cajaFCC > p{
+    font-size: var(--xs);
+    font-weight: bold;
+
+    color: var(--secondary);
+    opacity: .8;
+    
+    text-align: center;
+}
+
+.cajaContacto, .cajaRedes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+}
+
+.cajaContacto > a, .cajaRedes > a{
+    font-size: var(--m);
+    color: var(--secondary);
+    opacity: .8;
+
+    text-decoration: none;
+}
+
+.cajaContacto > a:visited, .cajaRedes > a:visited{
+    color: var(--secondary);
+}
+
+.cajaContacto > a > i, .cajaRedes > a > i{
+    padding: 0 12px;
+
+    font-size: var(--xxl);
+    color: var(--secondary);
+    opacity: .8;
+}
+
+#copyright{
+    font-size: var(--xs);
+    font-weight: bolder;
+
+    color: black;
+    opacity: .8;
+}
