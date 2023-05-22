@@ -333,12 +333,16 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
 }
 
 .cajaPremio > .titulo{
     font-size: var(--xxl);
     color: var(--secondary);
+}
+
+.cajaPremio > img{
+    margin-top: 40px;
+    width: clamp(280px, 100%, 900px);
 }
 
 .cajaPremio > .texto{
@@ -405,19 +409,19 @@ footer{
 }
 
 .cajaFCC{
-    margin-bottom: 60px;
-
+    width: 100%;
+    padding-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .cajaFCC > a > img{
-    padding-right: 12px;
     width: 65px;
     opacity: .8;
-
-    border-right: 1px solid var(--secondary);
 }
 
 .cajaFCC > p{
@@ -427,55 +431,40 @@ footer{
     color: var(--secondary);
     opacity: .8;
     
-    text-align: start;
+    text-align: center;
 }
 
-.cajaContacto{
+.cajaContacto, .cajaRedes{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: start;
     gap: 12px;
 }
 
-.cajaContacto > i{
-    font-size: var(--xxl);
-    color: var(--secondary);
-    opacity: .8;
-}
-
-.cajaContacto > a{
+.cajaContacto > a, .cajaRedes > a{
+    font-size: var(--m);
     color: var(--secondary);
     opacity: .8;
 
     text-decoration: none;
 }
 
-.cajaContacto > a:visited{
+.cajaContacto > a:visited, .cajaRedes > a:visited{
     color: var(--secondary);
 }
 
-.cajaContacto > p{
-    color: var(--secondary);
-    opacity: .8;
-}
+.cajaContacto > a > i, .cajaRedes > a > i{
+    padding: 0 12px;
 
-.cajaRedes{
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-}
-
-.cajaRedes > a{
     font-size: var(--xxl);
     color: var(--secondary);
     opacity: .8;
 }
 
-.cajaRedes > a:visited{
-    color: var(--secondary);
-}
-
 #copyright{
     font-size: var(--xs);
+    font-weight: bolder;
 
     color: black;
     opacity: .8;
