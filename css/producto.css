@@ -143,7 +143,7 @@ footer{
 
 .cajaFCC > a > img{
     width: 65px;
-    opacity: .8;
+    opacity: 1;
     animation-iteration-count: infinite;
 }
 
@@ -152,7 +152,7 @@ footer{
     font-weight: bold;
 
     color: var(--secondary);
-    opacity: .8;
+    opacity: .9;
     
     text-align: center;
 }
@@ -168,7 +168,7 @@ footer{
 .cajaContacto > a, .cajaRedes > a{
     font-size: var(--m);
     color: var(--secondary);
-    opacity: .8;
+    opacity: .9;
 
     text-decoration: none;
 }
@@ -182,7 +182,7 @@ footer{
 
     font-size: var(--xxl);
     color: var(--secondary);
-    opacity: .8;
+    opacity: .9;
 }
 
 #copyright{
@@ -190,5 +190,5 @@ footer{
     font-weight: bolder;
 
     color: black;
-    opacity: .8;
+    opacity: .9;
 }

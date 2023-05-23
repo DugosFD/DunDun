@@ -9,6 +9,7 @@
     <link rel="icon" href="/assets/dundun-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/producto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
     <script src="https://kit.fontawesome.com/5551b9f5ae.js" crossorigin="anonymous"></script>
 
@@ -36,7 +37,7 @@
 
     <main>
         <section id="contenedorProducto">
-            <div class="cajaDescripcion">
+            <div data-aos="zoom-in" class="cajaDescripcion">
                 <h1 class="titulo">EL PRODUCTO</h1>
                 <p class="texto">
                     Masa DunDun es una tecnología exclusiva de la FCC. 
@@ -47,14 +48,103 @@
                 </p>
             </div>
             
-            <div class="cajaVideo">
+            <div data-aos="zoom-in" class="cajaVideo">
                 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4S55ggGGoIQ" 
                 title="YouTube video player" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
 
-        <footer>
+        <section id="contenedorLineaHistorica">
+            <h2 class="titulo"><span>Historia</span> del producto</h2>
+
+            <div class="cajaFecha">
+                <p class="texto">1980</p>
+                <p class="texto">Inicio del proyecto.</p>
+            </div>
+
+            <div class="cajaFecha">
+                <p class="texto">2011</p>
+                <p class="texto">Comienza la producción a gran escala.</p>
+            </div>
+
+            <div class="cajaFecha">
+                <p class="texto">2012</p>
+                <p class="texto">
+                    Premio CBIC Inovación: Iniciativa de la Cámara Brasilera de la Industria de la Construcción, 
+                    premio CBIC a la innovación y la sustentabilidad, con el fin de reconocer y promover nuevas soluciones 
+                    para la modernización de la industria de la construcción.
+                </p>
+            </div>
+
+            <div class="cajaFecha">
+                <p class="texto">2013</p>
+                <p class="texto">
+                    Lanzamiento del paquete de 3 kg. A partir de la asociación con SINDUSCOM.
+                    Prueba adoptado la durabilidad (ensayo en cámara climática).
+                </p>
+            </div>
+
+            <div class="cajaFecha">
+                <p class="texto">2014</p>
+                <p class="texto">Certificación NBR 15575.</p>
+            </div>
+
+            <div class="cajaFecha">
+                <p class="texto">2015</p>
+                <p class="texto">Más de100 edificios con 20 pisos cada uno. Exportaciones a más de 5 países. 
+                    Inicio de asociación con el SENAI.
+                </p>
+            </div>
+
+            <div class="cajaFecha">
+                <p class="texto">2016</p>
+                <p class="texto">
+                    Se duplica la CAPACIDAD DE PRODUCCIÓN. 
+                    RECONOCIMIENTO SEBRAE categoría de diseño PRODUCTO.
+                </p>
+            </div>
+
+            <div class="cajaFecha">
+                <p class="texto">2017</p>
+                <p class="texto">Qualificação na ABNT 16590:2017 Massa DunDun: Referência em padrões de qualidade.</p>
+            </div>
+        </section>
+
+        <section id="contenedorUtilizacion">
+            <div class="cajaDescripcion">
+                <h2 class="titulo">¿DÓNDE SE PUEDE UTILIZAR?</h2>
+                <p class="texto">
+                    En la construcción de mampostería, no refractaria y sin función estructural. 
+                    El producto está recomendado para la fijación de ladrillos cerámicos, 
+                    bloques de hormigón, hormigón celular y ladrillos de prensa.
+                </p>
+            </div>
+
+            <div class="cajaBloques">
+                <div class="cajitaBloque">
+                    <img src="" alt="Bloque cerámico">
+                    <p>BLOQUE CERÁMICO ORIFICIOS HORIZONTALES</p>
+                </div>
+
+                <div class="cajitaBloque">
+                    <img src="" alt="Bloque cerámico 2">
+                    <p>BLOQUE CERÁMICO AGUJEROS VERTICALES</p>
+                </div>
+
+                <div class="cajitaBloque">
+                    <img src="" alt="Bloque de hormigón">
+                    <p>BLOQUE DE HORMIGÓN</p>
+                </div>
+
+                <div class="cajitaBloque">
+                    <img src="" alt="Bloque de hormigón celular">
+                    <p>BLOQUE DE HORMIGÓN CELULAR</p>
+                </div>
+            </div>
+        </section>
+
+        <footer data-aos="fade-up">
             <div class="cajaFCC">
                 <a href="https://www.fcc.com.br/" target="_blank"><img class="animate__animated animate__pulse" src="/images/fcc-logo.svg" alt="Logo de FCC"></a>
                 <p class="texto">UTILIZAMOS LA CIENCIA DE LOS MATERIALES PARA AUMENTAR EL ÉXITO DE LOS CLIENTES.</p>
@@ -76,5 +166,8 @@
     </main>
 
 </body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/index.js"></script>
 
 </html>
