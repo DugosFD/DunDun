@@ -19,17 +19,19 @@
 <body>
     <header>
         <nav id="topBar">
-            <img class="logo" src="/assets/logo.png" alt="Logo de la empresa">
-            <button id="botonMenu"><i class="fa-solid fa-bars"></i></button>
+            <a href="/index.html"><img class="logo" src="/assets/logo.png" alt="Logo de la empresa"></a>
+            <button id="botonMenu"><i id="iconoMenu" class="fa-solid fa-bars click"></i></button>
         </nav>
+
         <ul id="menu">
-            <li><a href="/html/home.html">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li><a href="/html/producto.html">Producto</a></li>
             <li><a href="/html/pruebas.html">Pruebas técnicas</a></li>
             <li><a href="/html/uso.html">Instrucciones de uso</a></li>
             <li><a href="/html/obras.html">Obras</a></li>
             <li><a href="/html/contacto.html">Contacto</a></li>
         </ul>
+
         <div id="portada">
             <img src="/images/portada.jpeg" alt="Imagen de portada">
         </div>
@@ -269,31 +271,30 @@
                 </div>
             </div>
         </section>
-
-        <footer data-aos="fade-up">
-            <div class="cajaFCC">
-                <a href="https://www.fcc.com.br/" target="_blank"><img class="animate__animated animate__pulse" src="/images/fcc-logo.svg" alt="Logo de FCC"></a>
-                <p class="texto">UTILIZAMOS LA CIENCIA DE LOS MATERIALES PARA AUMENTAR EL ÉXITO DE LOS CLIENTES.</p>
-            </div>
-
-            <div class="cajaContacto">
-                <a href="tel: +595981232217" class="texto"><i class="fa-solid fa-phone"></i>+595 981 232217</a>
-                <a href="https://api.whatsapp.com/send/?phone=595971373880&text&type=phone_number&app_absent=0" 
-                target="_blank" class="texto"><i class="fa-brands fa-whatsapp"></i>+595 971 373880</a>
-            </div>
-
-            <div class="cajaRedes">
-                <a href="https://www.facebook.com/profile.php?id=100070987632071"><i class="fa-brands fa-facebook"></i>DUN DUN Paraguay</a>
-                <a href="https://www.instagram.com/dundun_paraguay/"><i class="fa-brands fa-instagram"></i>dundun_paraguay</a>
-            </div>
-
-            <p id="copyright" class="texto">© Masa DunDun. Todos los derechos reservados.</p>
-        </footer>
     </main>
 
+    <footer>
+        <div class="cajaFCC">
+            <a href="https://www.fcc.com.br/" target="_blank"><img class="animate__animated animate__pulse" src="/images/fcc-logo.svg" alt="Logo de FCC"></a>
+            <p class="texto">UTILIZAMOS LA CIENCIA DE LOS MATERIALES PARA AUMENTAR EL ÉXITO DE LOS CLIENTES.</p>
+        </div>
+
+        <div class="cajaContacto">
+            <a href="tel: +595981232217" class="texto"><i class="fa-solid fa-phone"></i>+595 981 232217</a>
+            <a href="https://api.whatsapp.com/send/?phone=595971373880&text&type=phone_number&app_absent=0" 
+            target="_blank" class="texto"><i class="fa-brands fa-whatsapp"></i>+595 971 373880</a>
+        </div>
+
+        <div class="cajaRedes">
+            <a href="https://www.facebook.com/profile.php?id=100070987632071"><i class="fa-brands fa-facebook"></i>DUN DUN Paraguay</a>
+            <a href="https://www.instagram.com/dundun_paraguay/"><i class="fa-brands fa-instagram"></i>dundun_paraguay</a>
+        </div>
+
+        <p id="copyright" class="texto">© Masa DunDun. Todos los derechos reservados.</p>
+    </footer>
 </body>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/index.js"></script>
+<script src="/general.js"></script>
 
 </html>

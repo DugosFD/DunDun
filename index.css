@@ -1,4 +1,4 @@
-/* Vars and base styles */
+/* Variables y estilos base */
 
 :root{
     --primary: rgb(0, 46, 120);
@@ -29,17 +29,23 @@ html{
     font-family: 'Quicksand', sans-serif;
 }
 
-/* Mobile design */
+/* Diseño Mobile */
 
 #topBar{
     width: 100vw;
     height: 75px;
+
+    position: fixed;
+    top: 0;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     
     background-color: var(--secondary);
+    opacity: .95;
+
+    z-index: 2;
 }
 
 .logo{
@@ -54,24 +60,36 @@ html{
     border: none;
 }
 
-#botonMenu i{
+#iconoMenu{
     font-size: 28px;
     color: var(--primary);
+    transition: all 500ms;
 }
 
 #menu{
     width: 100vw;
-    margin: 16px 0;
+    padding-top: 16px;
+    position: fixed;
+    bottom: 100%;
 
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
 
     background-color: var(--secondary);
+    opacity: .95;
 
     list-style: none;
+
+    z-index: 1;
+
+    transition: all 500ms ease;
+}
+
+.menuActivo{
+    transform: translateY(calc(100% + 75px));
 }
 
 #menu > li{
@@ -79,18 +97,20 @@ html{
     height: 35px;
 
     display: flex;
+    justify-content: center;
     align-items: start;
 
-    border-bottom: 1px solid rgb(210, 210, 210);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
 #menu li > a{
     font-size: var(--m);
-    color: var(--text-color);
+    color: var(--primary);
     text-decoration: none;
 }
 
 #portada{
+    margin-top: 75px;
     width: 100%;
     height: clamp(200px, 55vw, 600px);
 }
