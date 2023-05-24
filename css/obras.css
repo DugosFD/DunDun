@@ -31,6 +31,16 @@ html{
 
 /* Diseño Mobile */
 
+#fondoNegro{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    opacity: 0;
+    transition: all 500ms;
+}
+
 #topBar{
     width: 100vw;
     height: 75px;

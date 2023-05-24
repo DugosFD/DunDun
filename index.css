@@ -31,6 +31,16 @@ html{
 
 /* Diseño Mobile */
 
+#fondoNegro{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    opacity: 0;
+    transition: all 500ms;
+}
+
 #topBar{
     width: 100vw;
     height: 75px;
@@ -45,7 +55,7 @@ html{
     background-color: var(--secondary);
     opacity: .95;
 
-    z-index: 2;
+    z-index: 3;
 }
 
 .logo{
@@ -83,7 +93,7 @@ html{
 
     list-style: none;
 
-    z-index: 1;
+    z-index: 2;
 
     transition: all 500ms ease;
 }
