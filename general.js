@@ -13,11 +13,13 @@ iconoMenu.addEventListener("click", (e) =>{
         iconoMenu.style.transform = "rotate(180deg)";
         iconoMenu.style.color = "var(--secondary-2)";
         document.body.style.overflow="hidden";
+        document.querySelector("#fondoNegro").style.zIndex="1";
         document.querySelector("#fondoNegro").style.opacity=".75";
       } else {
         iconoMenu.style.transform = "rotate(0deg)";
         iconoMenu.style.color = "var(--primary)";
         document.body.style.overflow="auto";
+        document.querySelector("#fondoNegro").style.zIndex="-1";
         document.querySelector("#fondoNegro").style.opacity="0";
       }
 })

@@ -39,6 +39,8 @@ html{
     background-color: black;
     opacity: 0;
     transition: all 500ms;
+
+    z-index: -1;
 }
 
 #topBar{
@@ -55,7 +57,7 @@ html{
     background-color: var(--secondary);
     opacity: .95;
 
-    z-index: 2;
+    z-index: 3;
 }
 
 .logo{
@@ -93,7 +95,7 @@ html{
 
     list-style: none;
 
-    z-index: 1;
+    z-index: 2;
 
     transition: all 500ms ease;
 }
