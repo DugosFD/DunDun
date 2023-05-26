@@ -213,24 +213,40 @@ html{
     color: var(--secondary-2);
 }
 
+#contenedorLineaHistorica > .titulo > i{
+    font-size: var(--xxxl);
+    color: var(--primary);
+}
+
 #miniContenedorFechas{
     width: 100%;
 
     display: flex;
     align-items: start;
+    gap: 12px;
+
     overflow-x: auto;
 }
 
 .cajaAnho{
+    height: 310px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 8px;
+
+    padding-right: 8px;
+    border-right: 1px solid rgb(255, 122, 1, .4)
+}
+
+.cajaAnho:last-child{
+    border-right: none;
 }
 
 .anho{
-    padding: 8px 16px;
+    padding: 8px 32px;
     font-size: var(--xxxl);
     font-weight: bold;
     color: var(--secondary-2);
@@ -242,6 +258,7 @@ html{
 
 .cajaAnho > .texto{
     width: 150px;
+
     font-size: var(--xs);
 }
 
