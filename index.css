@@ -60,12 +60,14 @@ body{
 }
 
 #cajaBoton > p{
+    font-size: var(--xs);
     color: var(--secondary);
+    margin-bottom: 12px;
 }
 
 #botonCierre{
-    width: clamp(28px, 10%, 40px);
-    margin: 12px;
+    width: clamp(25px, 6%, 35px);
+    margin: 0 0 12px 12px;
 }
 
 #ABNT{
