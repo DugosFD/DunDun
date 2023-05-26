@@ -218,8 +218,6 @@ html{
 
     display: flex;
     align-items: start;
-    gap: 8px;
-
     overflow-x: auto;
 }
 
