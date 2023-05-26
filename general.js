@@ -23,3 +23,8 @@ iconoMenu.addEventListener("click", (e) =>{
         document.querySelector("#fondoNegro").style.opacity="0";
       }
 })
+
+function cerrarPopUp(){
+  document.querySelector("#cajaNegraABNT").style.display="none";
+  document.body.style.overflow="auto";
+}
