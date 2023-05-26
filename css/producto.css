@@ -218,7 +218,7 @@ html{
 
     display: flex;
     align-items: start;
-    gap: 32px;
+    gap: 8px;
 
     overflow-x: auto;
 }
