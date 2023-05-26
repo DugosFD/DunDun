@@ -440,6 +440,10 @@ body{
     gap: 16px;
 }
 
+.cajaInfo > h2{
+    color: var(--text-color);
+}
+
 .cajaInfo > h2 > span{
     font-weight: bold;
     color: var(--secondary-2);
