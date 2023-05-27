@@ -162,7 +162,7 @@ html{
     gap: 32px;
 }
 
-.cajaDescripcion{
+#contenedorProducto > .cajaDescripcion{
     width: 100%;
 
     display: flex;
@@ -171,17 +171,17 @@ html{
     gap: 12px;
 }
 
-.cajaDescripcion > .titulo{
+#contenedorProducto > .cajaDescripcion > .titulo{
     color: var(--secondary);
     opacity: .8;
 }
 
-.cajaDescripcion > .titulo > span{
+#contenedorProducto .cajaDescripcion > .titulo > span{
     font-weight: bold;
     color: var(--secondary-2);
 }
 
-.cajaDescripcion > .texto{
+#contenedorProducto .cajaDescripcion > .texto{
     color: var(--secondary);
     opacity: .8;
 }
@@ -222,14 +222,15 @@ html{
     width: 100%;
 
     display: flex;
+    justify-content: start;
     align-items: start;
-    gap: 12px;
+    gap: 20px;
 
     overflow-x: auto;
 }
 
 .cajaAnho{
-    height: 310px;
+    height: 280px;
 
     display: flex;
     flex-direction: column;
@@ -237,8 +238,8 @@ html{
     align-items: center;
     gap: 8px;
 
-    padding-right: 8px;
-    border-right: 1px solid rgb(255, 122, 1, .4)
+    padding-right: 20px;
+    border-right: 1px solid rgb(255, 122, 1, .4);
 }
 
 .cajaAnho:last-child{
@@ -246,19 +247,19 @@ html{
 }
 
 .anho{
-    padding: 8px 32px;
+    padding: 8px 16px;
     font-size: var(--xxxl);
     font-weight: bold;
     color: var(--secondary-2);
 
-    border: 2px solid var(--secondary-2);
-    border-radius: 20px;
-    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, .3);
+    border-top: 2px solid var(--secondary-2);
+    border-bottom: 2px solid var(--secondary-2);
+
+    border-radius: 8px;
 }
 
 .cajaAnho > .texto{
-    width: 150px;
-
+    width: 185px;
     font-size: var(--xs);
 }
 
@@ -273,6 +274,26 @@ html{
     justify-content: center;
     align-items: center;
     gap: 32px;
+}
+
+#contenedorUtilizacion .cajaDescripcion{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#contenedorUtilizacion > .cajaDescripcion > .titulo,
+#contenedorUtilizacion > .cajaDescripcion > .texto{
+    color: var(--secondary);
+    opacity: .8;
+}
+
+#contenedorUtilizacion > .cajaDescripcion > .titulo > span{
+    font-weight: bold;
+    color: var(--secondary-2);
 }
 
 .cajaBloques{
@@ -300,6 +321,116 @@ html{
     line-height: 16px;
     color: var(--secondary);
     opacity: .8;
+}
+
+#contenedorXQusarlo{
+    width: 100vw;
+    padding: 32px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+#contenedorXQusarlo .cajaDescripcion{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#contenedorXQusarlo .cajaDescripcion > .titulo{
+    color: var(--text-color);
+}
+
+#contenedorXQusarlo .cajaDescripcion > .titulo > span{
+    font-weight: bold;
+    color: var(--secondary-2);
+}
+
+
+#contenedorXQusarlo .cajaDescripcion > .texto{
+    color: var(--text-color);
+}
+
+.cajaImg{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.cajaImg > img{
+    width: 100%;
+}
+
+.cajitaInfo{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.cajitaInfo > i{
+    font-size: var(--xxxl);
+    color: var(--secondary-2);
+}
+
+.cajitaInfo > p{
+    font-weight: bold;
+}
+
+.cajitaSeguridad{
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.cajitaSeguridad > i{
+    font-size: var(--xxl);
+    color: var(--secondary-2);
+}
+
+.cajitaSeguridad > img{
+    width: var(--xxxl);
+}
+
+.cajaPruebas{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    padding-top: 32px;
+    border-top: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+.cajaPruebas > a{
+    padding: 8px;
+
+    background-color: var(--secondary);
+
+    font-size: var(--s);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary);
+
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, .5);
 }
 
 footer{
