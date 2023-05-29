@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+
 /* Variables y estilos base */
 
 :root{
-    --primary: rgb(0, 46, 120);
-    --secondary: rgb(255, 255, 255);
-    --secondary-2: rgb(255, 122, 1);
-    --text-color: rgb(100, 100, 100);
+    --fondoAzul: rgb(0, 46, 120);
+    --fondoBlanco: rgb(255, 255, 255);
+    --fondoNaranja: rgb(255, 122, 1);
+    --textoAzul: rgb(0, 46, 120, .8);
+    --textoGris: rgb(100, 100, 100);
+    --textoBlanco: rgb(255, 255, 255, .8);
+    --textoNaranja: rgb(255, 122, 1, .8);
 
     --xxxs: clamp(0.8rem, 1.6vw, 1rem);
     --xxs: clamp(1rem, 2vw, 1.25rem);
@@ -14,7 +20,7 @@
     --l: clamp(1.8rem, 3.6vw, 2.25rem);
     --xl: clamp(2rem, 4vw, 2.5rem);
     --xxl: clamp(2.4rem, 4.8vw, 3rem);
-    --xxxl: clamp(2.8rem, 5.6vw, 3.5rem);
+    --xxxl: clamp(3rem, 6vw, 3.75rem);
 }
 
 html{
@@ -30,7 +36,7 @@ body{
     padding: 0;
     box-sizing: border-box;
 
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* Diseño Mobile */
@@ -61,7 +67,7 @@ body{
 
 #cajaBoton > p{
     font-size: var(--xs);
-    color: var(--secondary);
+    color: var(--fondoBlanco);
     margin-bottom: 12px;
 }
 
@@ -72,7 +78,7 @@ body{
 
 #ABNT{
     width: clamp(260px, 90%, 500px);
-    border: 4px solid var(--secondary);
+    border: 4px solid var(--fondoBlanco);
 }
 
 #fondoNegro{
@@ -98,7 +104,7 @@ body{
     justify-content: space-between;
     align-items: center;
     
-    background-color: var(--secondary);
+    background-color: var(--fondoBlanco);
     opacity: .95;
 
     z-index: 3;
@@ -118,7 +124,7 @@ body{
 
 #iconoMenu{
     font-size: 28px;
-    color: var(--primary);
+    color: var(--fondoAzul);
     transition: all 500ms;
 }
 
@@ -134,7 +140,7 @@ body{
     align-items: center;
     gap: 20px;
 
-    background-color: var(--secondary);
+    background-color: var(--fondoBlanco);
     opacity: .95;
 
     list-style: none;
@@ -161,7 +167,7 @@ body{
 
 #menu li > a{
     font-size: var(--m);
-    color: var(--primary);
+    color: var(--fondoAzul);
     text-decoration: none;
 }
 
@@ -179,7 +185,7 @@ body{
 #contenedorBeneficios{
     width: 100vw;
 
-    background-color: var(--primary);
+    background-color: var(--fondoAzul);
 
     display: flex;
     flex-direction: column;
@@ -205,7 +211,7 @@ body{
 
 .info{
     font-size: var(--m);
-    color: var(--secondary);
+    color: var(--fondoBlanco);
 
     text-align: center;
     line-height: 24px;
@@ -218,7 +224,7 @@ body{
 #contenedorDescripciones{
     width: 100vw;
 
-    background-color: var(--secondary);
+    background-color: var(--fondoBlanco);
 }
 
 .cajaDescripcion{
@@ -244,18 +250,18 @@ body{
 }
 
 .cajaDescripcion > .titulo{
-    color: var(--text-color);
+    color: var(--textoGris);
 }
 
 .cajaDescripcion > .titulo > span{
-    color: var(--secondary-2);
+    color: var(--fondoNaranja);
     font-weight: 600;
 }
 
 .texto{
     font-size: var(--m);
     font-weight: 300;
-    color: var(--text-color);
+    color: var(--textoGris);
     text-align: center;
     line-height: 24px;
 }
@@ -291,7 +297,7 @@ body{
 .cajaCaracteristica > p{
     font-size: var(--xs);
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--textoGris);
     opacity: .8;
     text-align: start;
 }
@@ -305,23 +311,22 @@ body{
     align-items: center;
     gap: 4px;
 
-    background-color: var(--primary);
+    background-color: var(--fondoAzul);
 
 }
 
 #contenedorPruebas > h2{
-    color: var(--secondary);
-    opacity: .8;
+    color: var(--textoBlanco);
 }
 
 #contenedorPruebas > h2 > span{
     font-weight: bolder;
-    color: var(--secondary-2);
+    color: var(--fondoNaranja);
 }
 
 #contenedorPruebas > p{
     align-self: start;
-    color: var(--secondary);
+    color: var(--fondoBlanco);
     opacity: .8;
 }
 
@@ -338,15 +343,15 @@ body{
 
     font-size: var(--xs);
     font-weight: bolder;
-    color: var(--secondary);
+    color: var(--fondoBlanco);
     text-decoration: none;
 
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--fondoBlanco);
     border-radius: 20px;
 }
 
 #botonSaberMas:visited{
-    color: var(--secondary);
+    color: var(--fondoBlanco);
 }
 
 #contenedorInstituciones{
@@ -390,7 +395,7 @@ body{
 #contenedorPremios{
     width: 100vw;
 
-    background-color: var(--primary);
+    background-color: var(--fondoAzul);
 
     display: flex;
     flex-direction: column;
@@ -409,7 +414,7 @@ body{
 
 .cajaPremio > .titulo{
     font-size: var(--xxl);
-    color: var(--secondary);
+    color: var(--fondoBlanco);
 }
 
 .cajaPremio > img{
@@ -418,7 +423,7 @@ body{
 }
 
 .cajaPremio > .texto{
-    color: var(--secondary);
+    color: var(--fondoBlanco);
 }
 
 #contenedorTecnologiaFCC{
@@ -441,12 +446,12 @@ body{
 }
 
 .cajaInfo > h2{
-    color: var(--text-color);
+    color: var(--textoGris);
 }
 
 .cajaInfo > h2 > span{
     font-weight: bold;
-    color: var(--secondary-2);
+    color: var(--fondoNaranja);
 }
 
 .cajaDatos{
@@ -461,8 +466,8 @@ body{
     font-size: 40px;
     font-weight: bold;
     
-    border-bottom: 2px solid var(--secondary-2);
-    border-right: 1px solid var(--secondary-2);
+    border-bottom: 2px solid var(--fondoNaranja);
+    border-right: 1px solid var(--fondoNaranja);
 
     border-radius: 25px;
 }
@@ -476,7 +481,7 @@ footer{
     width: 100vw;
     padding: 32px 16px 8px;
 
-    background-color: var(--secondary-2);
+    background-color: var(--fondoNaranja);
 
     display: flex;
     flex-direction: column;
@@ -505,7 +510,7 @@ footer{
     font-size: var(--xs);
     font-weight: bold;
 
-    color: var(--secondary);
+    color: var(--fondoBlanco);
     opacity: .9;
     
     text-align: center;
@@ -521,21 +526,21 @@ footer{
 
 .cajaContacto > a, .cajaRedes > a{
     font-size: var(--m);
-    color: var(--secondary);
+    color: var(--fondoBlanco);
     opacity: .9;
 
     text-decoration: none;
 }
 
 .cajaContacto > a:visited, .cajaRedes > a:visited{
-    color: var(--secondary);
+    color: var(--fondoBlanco);
 }
 
 .cajaContacto > a > i, .cajaRedes > a > i{
     padding: 0 12px;
 
     font-size: var(--xxl);
-    color: var(--secondary);
+    color: var(--fondoBlanco);
     opacity: .9;
 }
 
