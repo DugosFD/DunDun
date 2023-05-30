@@ -1,35 +1,45 @@
+/* Agregando la tiporafía desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
 /* Variables y estilos base */
 
 :root{
-    --fondoAzul: rgb(0, 46, 120);
-    --fondoBlanco: rgb(255, 255, 255);
-    --fondoNaranja: rgb(255, 122, 1);
+    /* Variables de colores para backgrounds, bordes, textos, etc. */
+    --azul: rgb(0, 46, 120);
+    --blanco: rgb(255, 255, 255);
+    --naranja: rgb(255, 122, 1);
+
     --textoAzul: rgb(0, 46, 120, .8);
     --textoGris: rgb(100, 100, 100);
     --textoBlanco: rgb(255, 255, 255, .8);
     --textoNaranja: rgb(255, 122, 1, .8);
 
+    /* Variables para font-sizes */
     --xxxs: clamp(0.8rem, 1.6vw, 1rem);
     --xxs: clamp(1rem, 2vw, 1.25rem);
     --xs: clamp(1.2rem, 2.4vw, 1.5rem);
     --s: clamp(1.4rem, 2.8vw, 1.75rem);
+
     --m: clamp(1.6rem, 3.2vw, 2rem);
+    
     --l: clamp(1.8rem, 3.6vw, 2.25rem);
     --xl: clamp(2rem, 4vw, 2.5rem);
     --xxl: clamp(2.4rem, 4.8vw, 3rem);
     --xxxl: clamp(3rem, 6vw, 3.75rem);
 }
 
+/* Ajuste para que 1 rem sea = 10px */
 html{
     font-size: 62.5%;
 }
 
+/* Ajuste para desactivar el scroll al inicio */
 body{
     overflow: hidden;
 }
 
+/* Ajustes para posicionar sin problemas cualquier contenedor. */
+/* tipografía general para toda la página */
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +50,55 @@ body{
 
 /* Diseño Mobile */
 
-#cajaNegraABNT{
+/* Clase para todos los contenedores principales(section) */
+.contenedor{
+    width: 100vw;
+    padding: 32px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Clases para los background-colors de los contenedores principales */
+.azul{
+    color: var(--textoBlanco);
+    background-color: var(--azul);
+}
+
+.blanco{
+    color: var(--textoGris);
+    background-color: var(--blanco);
+}
+
+.naranja{
+    color: var(--textoBlanco);
+    background-color: var(--naranja);
+}
+
+/* Clases generales para titulos y textos respectivamente */
+.titulo{
+    font-size: var(--xl);
+    font-weight: 500;
+    text-align: center;
+    line-height: 28px;
+}
+
+.texto{
+    font-size: var(--m);
+    font-weight: 300;
+    text-align: center;
+    line-height: 24px;
+}
+
+span{
+    font-weight: 700;
+    color: var(--textoNaranja);
+}
+
+/* Clases para el Pop Up al inicio del Home */
+#caja-negra-ABNT{
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -56,7 +114,7 @@ body{
     z-index: 4;
 }
 
-#cajaBoton{
+.caja-boton{
     width: clamp(260px, 90%, 500px);
 
     display: flex;
@@ -64,23 +122,24 @@ body{
     align-items: center;
 }
 
-#cajaBoton > p{
-    font-size: var(--xs);
-    color: var(--fondoBlanco);
+.caja-boton > p{
+    font-size: var(--s);
+    color: var(--blanco);
     margin-bottom: 12px;
 }
 
-#botonCierre{
+.boton-cerrar{
     width: clamp(25px, 6%, 35px);
     margin: 0 0 12px 12px;
 }
 
 #ABNT{
     width: clamp(260px, 90%, 500px);
-    border: 4px solid var(--fondoBlanco);
+    border: 4px solid var(--blanco);
 }
 
-#fondoNegro{
+/* Clase para una mejor vista al abrir el menú */
+.fondo-negro{
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -92,7 +151,8 @@ body{
     z-index: -1;
 }
 
-#topBar{
+/* Clases de la barra de navegación y sus componentes */
+#top-bar{
     width: 100vw;
     height: 75px;
 
@@ -103,7 +163,7 @@ body{
     justify-content: space-between;
     align-items: center;
     
-    background-color: var(--fondoBlanco);
+    background-color: var(--blanco);
     opacity: .95;
 
     z-index: 3;
@@ -114,19 +174,20 @@ body{
     margin: 32px;
 }
 
-#botonMenu{
+#boton-menu{
     margin: 32px;
 
     background: none;
     border: none;
 }
 
-#iconoMenu{
+#icono-menu{
     font-size: 28px;
-    color: var(--fondoAzul);
+    color: var(--azul);
     transition: all 500ms;
 }
 
+/* Clases para la visualización correcta del menú y sus estilos */
 #menu{
     width: 100vw;
     padding-top: 16px;
@@ -139,7 +200,7 @@ body{
     align-items: center;
     gap: 20px;
 
-    background-color: var(--fondoBlanco);
+    background-color: var(--blanco);
     opacity: .95;
 
     list-style: none;
@@ -149,7 +210,7 @@ body{
     transition: all 500ms ease;
 }
 
-.menuActivo{
+.menu-activo{
     transform: translateY(calc(100% + 75px));
 }
 
@@ -161,122 +222,66 @@ body{
     justify-content: center;
     align-items: start;
 
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 #menu li > a{
     font-size: var(--m);
-    color: var(--fondoAzul);
+    font-weight: 900;
+    color: var(--textoAzul);
     text-decoration: none;
 }
 
-#portada{
+/* Clases para la portada */
+.portada{
     margin-top: 75px;
     width: 100%;
     height: clamp(200px, 55vw, 600px);
 }
 
-#portada > img{
+.portada > img{
     width: inherit;
     height: inherit;
 }
 
-#contenedorBeneficios{
-    width: 100vw;
-
-    background-color: var(--fondoAzul);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.cajaBeneficio{
+/* Clases para la sección de beneficios */
+.caja-beneficio{
     width: 200px;
-    margin: 28px 0;
+    margin: 20px 0;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 12px;
 }
 
-.cajaBeneficio > img{
+.caja-beneficio > img{
     width: 75px;
     height: 75px;
 }
 
-.info{
-    font-size: var(--m);
-    color: var(--fondoBlanco);
-
-    text-align: center;
-    line-height: 24px;
+.caja-beneficio > .texto > span{
+    font-size: var(--xxxl);
+    color: var(--textoBlanco);
 }
 
-.info > span{
-    font-size: 30px;
-}
-
-#contenedorDescripciones{
-    width: 100vw;
-
-    background-color: var(--fondoBlanco);
-}
-
-.cajaDescripcion{
-    width: 100%;
-    padding: 32px 16px;
-
+/* Clase para la sección "¿Que es Masa DunDun?" */
+.caja-descripcion{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
-
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    gap: 12px;
 }
 
-.titulo{
-    margin: 0 20px;
-
-    font-size: var(--xl);
-    font-weight: 500;
-    text-align: center;
-    line-height: 28px;
-}
-
-.cajaDescripcion > .titulo{
-    color: var(--textoGris);
-}
-
-.cajaDescripcion > .titulo > span{
-    color: var(--fondoNaranja);
-    font-weight: 600;
-}
-
-.texto{
-    font-size: var(--m);
-    font-weight: 300;
-    color: var(--textoGris);
-    text-align: center;
-    line-height: 24px;
-}
-
-#contenedorCaracteristicas{
-    width: 100vw;
-    padding: 32px 8px;
-
-    display: flex;
+/* Clases para las características del producto */
+#caracteristicas{
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
+    justify-content: space-evenly;
 }
 
-.cajaCaracteristica{
+.caja-caracteristica{
     width: 200px;
 
     display: flex;
@@ -284,16 +289,16 @@ body{
     gap: 12px;
 }
 
-.cajaCaracteristica > img{
+.caja-caracteristica > img{
     width: 50px;
     height: 40px;
 }
 
-.cajaCaracteristica:nth-child(2) > img, .cajaCaracteristica:nth-child(3) > img{
+.caja-caracteristica:nth-child(2) > img, .caja-caracteristica:nth-child(3) > img{
     filter: contrast(0);
 }
 
-.cajaCaracteristica > p{
+.caja-caracteristica > p{
     font-size: var(--xs);
     font-weight: bold;
     color: var(--textoGris);
@@ -301,71 +306,42 @@ body{
     text-align: start;
 }
 
-#contenedorPruebas{
-    width: 100vw;
-    padding: 32px 16px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-
-    background-color: var(--fondoAzul);
-
+/* Clases para la sección de pruebas técnicas */
+#pruebas{
+    gap: 0;
 }
 
-#contenedorPruebas > h2{
-    color: var(--textoBlanco);
-}
-
-#contenedorPruebas > h2 > span{
-    font-weight: bolder;
-    color: var(--fondoNaranja);
-}
-
-#contenedorPruebas > p{
-    align-self: start;
-    color: var(--fondoBlanco);
-    opacity: .8;
-}
-
-#contenedorPruebas > p:first-of-type{
-    margin: 24px 0px;
+#pruebas > p:first-of-type{
+    margin: 12px;
     font-style: italic;
-    text-align: start;
 }
 
-#botonSaberMas{
-    align-self: start;
+.boton{
     margin-top: 28px;
     padding: 12px;
 
     font-size: var(--xs);
     font-weight: bolder;
-    color: var(--fondoBlanco);
+    color: var(--blanco);
     text-decoration: none;
 
-    border: 1px solid var(--fondoBlanco);
+    border: 1px solid var(--blanco);
     border-radius: 20px;
 }
 
-#botonSaberMas:visited{
-    color: var(--fondoBlanco);
+.boton:visited{
+    color: var(--blanco);
 }
 
-#contenedorInstituciones{
-    width: 100vw;
-    padding: 32px 8px;
-
-    display: flex;
+/* Clases para la sección de instituciones */
+#instituciones{
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 32px;
-
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 
-#contenedorInstituciones > img{
+#instituciones > img{
     min-width: 30px;
     max-height: 40px;
 
@@ -373,123 +349,59 @@ body{
     opacity: .8;
 }
 
-#contenedorGBC{
-    width: 100vw;
-    padding: 32px 16px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-#contenedorGBC > p{
-    font-size: var(--s);
-}
-
-#contenedorGBC > img{
+/* Clase para el emblema de miembro de GBC */
+#gbc > img{
     width: 120px;
 }
 
-#contenedorPremios{
-    width: 100vw;
-
-    background-color: var(--fondoAzul);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.cajaPremio{
-    width: 100%;
-    padding: 60px 16px;
-
+/* Clases para la sección de premios */
+.caja-premio{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cajaPremio > .titulo{
+.caja-premio > .titulo{
     font-size: var(--xxl);
-    color: var(--fondoBlanco);
 }
 
-.cajaPremio > img{
+.caja-premio > img{
     margin-top: 40px;
     width: clamp(280px, 100%, 500px);
 }
 
-.cajaPremio > .texto{
-    color: var(--fondoBlanco);
-}
+/* Clases para la sección sobre la presencia de la tecnología FCC en el producto */
+.caja-datos{
+    margin: 16px 0;
 
-#contenedorTecnologiaFCC{
-    width: 100vw;
-    padding: 32px 16px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 44px;
-
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
-}
-
-.cajaInfo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
-
-.cajaInfo > h2{
-    color: var(--textoGris);
-}
-
-.cajaInfo > h2 > span{
-    font-weight: bold;
-    color: var(--fondoNaranja);
-}
-
-.cajaDatos{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
 }
 
-.cajaDatos > p:first-child{
+.caja-datos > p:first-child{
     padding: 20px;
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 700;
     
-    border-bottom: 2px solid var(--fondoNaranja);
-    border-right: 1px solid var(--fondoNaranja);
+    border-bottom: 2px solid var(--naranja);
+    border-right: 1px solid var(--naranja);
 
     border-radius: 25px;
 }
 
-.cajaDatos > p:last-child{
+.caja-datos > p:last-child{
     font-size: var(--s);
-    font-weight: bold;
+    font-weight: 700;
 }
 
-footer{
-    width: 100vw;
-    padding: 32px 16px 8px;
-
-    background-color: var(--fondoNaranja);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+/* Clases para dar estilo al footer general de la página */
+#footer{
+    padding-bottom: 4px;
 }
 
-.cajaFCC{
-    width: 100%;
+.caja-FCC{
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -499,54 +411,47 @@ footer{
     border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
-.cajaFCC > a > img{
+.caja-FCC > a > img{
     width: 65px;
     opacity: 1;
     animation-iteration-count: infinite;
 }
 
-.cajaFCC > p{
-    font-size: var(--xs);
-    font-weight: bold;
-
-    color: var(--fondoBlanco);
-    opacity: .9;
-    
-    text-align: center;
+.caja-FCC > p{
+    font-size: var(--s);
+    font-weight: 800;
 }
 
-.cajaContacto, .cajaRedes{
-    width: 100%;
+.caja-contacto, .caja-redes{
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 12px;
 }
 
-.cajaContacto > a, .cajaRedes > a{
-    font-size: var(--m);
-    color: var(--fondoBlanco);
-    opacity: .9;
-
+.caja-contacto > a, .caja-redes > a{
+    font-weight: 600;
+    color: var(--textoBlanco);
     text-decoration: none;
 }
 
-.cajaContacto > a:visited, .cajaRedes > a:visited{
-    color: var(--fondoBlanco);
+.caja-contacto > a:visited, .caja-redes > a:visited{
+    color: var(--textoBlanco);
 }
 
-.cajaContacto > a > i, .cajaRedes > a > i{
-    padding: 0 12px;
+.caja-contacto > a > i, .caja-redes > a > i{
+    margin: 0 12px;
 
     font-size: var(--xxl);
-    color: var(--fondoBlanco);
-    opacity: .9;
+    color: var(--textoBlanco);
 }
 
 #copyright{
-    font-size: var(--xs);
-    font-weight: bolder;
+    font-size: var(--s);
+    font-weight: 800;
 
-    color: black;
-    opacity: .9;
+    color: rgba(0, 0, 0, .8);
 }
+
+/* Fin de la hoja CSS para index.html */

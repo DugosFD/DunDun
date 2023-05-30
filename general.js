@@ -2,29 +2,29 @@ AOS.init({
     duration: 1000
 });
 
-const iconoMenu = document.querySelector("#iconoMenu"),
+const iconoMenu = document.querySelector("#icono-menu"),
       menu = document.querySelector("#menu");
 
 iconoMenu.addEventListener("click", (e) =>{
-    menu.classList.toggle("menuActivo");
-    iconoMenu.classList.toggle("botonActivo");
+    menu.classList.toggle("menu-activo");
+    iconoMenu.classList.toggle("boton-activo");
 
-    if (iconoMenu.classList.contains("botonActivo")) {
+    if (iconoMenu.classList.contains("boton-activo")) {
         iconoMenu.style.transform = "rotate(180deg)";
-        iconoMenu.style.color = "var(--secondary-2)";
+        iconoMenu.style.color = "var(--naranja)";
         document.body.style.overflow="hidden";
-        document.querySelector("#fondoNegro").style.zIndex="1";
-        document.querySelector("#fondoNegro").style.opacity=".75";
+        document.querySelector(".fondo-negro").style.zIndex="1";
+        document.querySelector(".fondo-negro").style.opacity=".75";
       } else {
         iconoMenu.style.transform = "rotate(0deg)";
-        iconoMenu.style.color = "var(--primary)";
+        iconoMenu.style.color = "var(--azul)";
         document.body.style.overflow="auto";
-        document.querySelector("#fondoNegro").style.zIndex="-1";
-        document.querySelector("#fondoNegro").style.opacity="0";
+        document.querySelector(".fondo-negro").style.zIndex="-1";
+        document.querySelector(".fondo-negro").style.opacity="0";
       }
 })
 
 function cerrarPopUp(){
-  document.querySelector("#cajaNegraABNT").style.display="none";
+  document.querySelector("#caja-negra-ABNT").style.display="none";
   document.body.style.overflow="auto";
 }
