@@ -175,7 +175,8 @@ span{
 }
 
 #boton-menu{
-    margin: 32px;
+    margin: 16px;
+    padding: 16px;
 
     background: none;
     border: none;
@@ -255,7 +256,7 @@ span{
 
 /* Clases para la sección de beneficios */
 .caja-beneficio{
-    width: 200px;
+    width: 250px;
     margin: 20px 0;
 
     display: flex;
@@ -330,11 +331,11 @@ span{
     padding: 12px;
 
     font-size: var(--xs);
-    font-weight: bolder;
-    color: var(--blanco);
+    font-weight: 800;
+    color: var(--textoBlanco);
     text-decoration: none;
 
-    border: 1px solid var(--blanco);
+    border: 2px solid var(--textoBlanco);
     border-radius: 20px;
 
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, .5);
@@ -343,7 +344,7 @@ span{
 }
 
 .boton:visited{
-    color: var(--blanco);
+    color: var(--textoBlanco);
 }
 
 .boton:hover{

@@ -129,10 +129,13 @@ span{
 }
 
 #boton-menu{
-    margin: 32px;
+    margin: 16px;
+    padding: 16px;
 
     background: none;
     border: none;
+
+    cursor: pointer;
 }
 
 #icono-menu{
@@ -186,7 +189,7 @@ span{
     text-decoration: none;
 }
 
-#menu li:nth-child(5) > a{
+#menu li:nth-child(3) > a{
     font-size: var(--m);
     font-weight: 800;
     color: var(--textoNaranja);
@@ -263,4 +266,4 @@ span{
     color: rgba(0, 0, 0, .8);
 }
 
-/* Fin de la hoja CSS para obras.html */
+/* Fin de la hoja CSS para pruebas.html */
