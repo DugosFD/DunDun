@@ -1,28 +1,40 @@
+/* Agregando la tiporafía desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
 /* Variables y estilos base */
 
 :root{
-    --primary: rgb(0, 46, 120);
-    --secondary: rgb(255, 255, 255);
-    --secondary-2: rgb(255, 122, 1);
-    --text-color: rgb(100, 100, 100);
+    /* Variables de colores para backgrounds, bordes, textos, etc. */
+    --azul: rgb(0, 46, 120);
+    --blanco: rgb(255, 255, 255);
+    --naranja: rgb(255, 122, 1);
 
+    --textoAzul: rgb(0, 46, 120, .8);
+    --textoGris: rgb(100, 100, 100);
+    --textoBlanco: rgb(255, 255, 255, .8);
+    --textoNaranja: rgb(255, 122, 1, .8);
+
+    /* Variables para font-sizes */
     --xxxs: clamp(0.8rem, 1.6vw, 1rem);
     --xxs: clamp(1rem, 2vw, 1.25rem);
     --xs: clamp(1.2rem, 2.4vw, 1.5rem);
     --s: clamp(1.4rem, 2.8vw, 1.75rem);
+
     --m: clamp(1.6rem, 3.2vw, 2rem);
+    
     --l: clamp(1.8rem, 3.6vw, 2.25rem);
     --xl: clamp(2rem, 4vw, 2.5rem);
     --xxl: clamp(2.4rem, 4.8vw, 3rem);
-    --xxxl: clamp(2.8rem, 5.6vw, 3.5rem);
+    --xxxl: clamp(3rem, 6vw, 3.75rem);
 }
 
+/* Ajuste para que 1 rem sea = 10px */
 html{
     font-size: 62.5%;
 }
 
+/* Ajustes para posicionar sin problemas cualquier contenedor. */
+/* tipografía general para toda la página */
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +45,55 @@ html{
 
 /* Diseño Mobile */
 
-#fondoNegro{
+/* Clase para todos los contenedores principales(section) */
+.contenedor{
+    width: 100vw;
+    padding: 32px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Clases para los background-colors de los contenedores principales */
+.azul{
+    color: var(--textoBlanco);
+    background-color: var(--azul);
+}
+
+.blanco{
+    color: var(--textoGris);
+    background-color: var(--blanco);
+}
+
+.naranja{
+    color: var(--textoBlanco);
+    background-color: var(--naranja);
+}
+
+/* Clases generales para titulos y textos respectivamente */
+.titulo{
+    font-size: var(--xl);
+    font-weight: 500;
+    text-align: center;
+    line-height: 28px;
+}
+
+.texto{
+    font-size: var(--m);
+    font-weight: 300;
+    text-align: center;
+    line-height: 24px;
+}
+
+span{
+    font-weight: 700;
+    color: var(--textoNaranja);
+}
+
+/* Clase para una mejor vista al abrir el menú */
+.fondo-negro{
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -45,7 +105,8 @@ html{
     z-index: -1;
 }
 
-#topBar{
+/* Clases de la barra de navegación y sus componentes */
+#top-bar{
     width: 100vw;
     height: 75px;
 
@@ -56,7 +117,7 @@ html{
     justify-content: space-between;
     align-items: center;
     
-    background-color: var(--secondary);
+    background-color: var(--blanco);
     opacity: .95;
 
     z-index: 3;
@@ -67,19 +128,20 @@ html{
     margin: 32px;
 }
 
-#botonMenu{
+#boton-menu{
     margin: 32px;
 
     background: none;
     border: none;
 }
 
-#iconoMenu{
+#icono-menu{
     font-size: 28px;
-    color: var(--primary);
+    color: var(--azul);
     transition: all 500ms;
 }
 
+/* Clases para la visualización correcta del menú y sus estilos */
 #menu{
     width: 100vw;
     padding-top: 16px;
@@ -92,7 +154,7 @@ html{
     align-items: center;
     gap: 20px;
 
-    background-color: var(--secondary);
+    background-color: var(--blanco);
     opacity: .95;
 
     list-style: none;
@@ -102,7 +164,7 @@ html{
     transition: all 500ms ease;
 }
 
-.menuActivo{
+.menu-activo{
     transform: translateY(calc(100% + 75px));
 }
 
@@ -114,57 +176,41 @@ html{
     justify-content: center;
     align-items: start;
 
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 #menu li > a{
     font-size: var(--m);
-    color: var(--primary);
+    font-weight: 600;
+    color: var(--textoAzul);
     text-decoration: none;
 }
 
-#portada{
+#menu li:nth-child(3) > a{
+    font-size: var(--m);
+    font-weight: 800;
+    color: var(--textoNaranja);
+    text-decoration: none;
+}
+
+/* Clases para la portada */
+.portada{
     margin-top: 75px;
     width: 100%;
     height: clamp(200px, 55vw, 600px);
 }
 
-#portada > img{
+.portada > img{
     width: inherit;
     height: inherit;
 }
 
-.titulo{
-    margin: 0 20px;
-
-    font-size: var(--xl);
-    font-weight: 500;
-    text-align: center;
-    line-height: 28px;
+/* Clases para dar estilo al footer general de la página */
+#footer{
+    padding-bottom: 4px;
 }
 
-.texto{
-    font-size: var(--m);
-    font-weight: 300;
-    color: var(--text-color);
-    text-align: center;
-    line-height: 24px;
-}
-
-footer{
-    width: 100vw;
-    padding: 32px 16px 8px;
-
-    background-color: var(--secondary-2);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.cajaFCC{
-    width: 100%;
+.caja-FCC{
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -174,54 +220,47 @@ footer{
     border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
-.cajaFCC > a > img{
+.caja-FCC > a > img{
     width: 65px;
     opacity: 1;
     animation-iteration-count: infinite;
 }
 
-.cajaFCC > p{
-    font-size: var(--xs);
-    font-weight: bold;
-
-    color: var(--secondary);
-    opacity: .9;
-    
-    text-align: center;
+.caja-FCC > p{
+    font-size: var(--s);
+    font-weight: 800;
 }
 
-.cajaContacto, .cajaRedes{
-    width: 100%;
+.caja-contacto, .caja-redes{
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 12px;
 }
 
-.cajaContacto > a, .cajaRedes > a{
-    font-size: var(--m);
-    color: var(--secondary);
-    opacity: .9;
-
+.caja-contacto > a, .caja-redes > a{
+    font-weight: 600;
+    color: var(--textoBlanco);
     text-decoration: none;
 }
 
-.cajaContacto > a:visited, .cajaRedes > a:visited{
-    color: var(--secondary);
+.caja-contacto > a:visited, .caja-redes > a:visited{
+    color: var(--textoBlanco);
 }
 
-.cajaContacto > a > i, .cajaRedes > a > i{
-    padding: 0 12px;
+.caja-contacto > a > i, .caja-redes > a > i{
+    margin: 0 12px;
 
     font-size: var(--xxl);
-    color: var(--secondary);
-    opacity: .9;
+    color: var(--textoBlanco);
 }
 
 #copyright{
-    font-size: var(--xs);
-    font-weight: bolder;
+    font-size: var(--s);
+    font-weight: 800;
 
-    color: black;
-    opacity: .9;
+    color: rgba(0, 0, 0, .8);
 }
+
+/* Fin de la hoja CSS para pruebas.html */

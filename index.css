@@ -179,6 +179,8 @@ span{
 
     background: none;
     border: none;
+
+    cursor: pointer;
 }
 
 #icono-menu{
@@ -227,8 +229,15 @@ span{
 
 #menu li > a{
     font-size: var(--m);
-    font-weight: 900;
+    font-weight: 600;
     color: var(--textoAzul);
+    text-decoration: none;
+}
+
+#menu li:nth-child(1) > a{
+    font-size: var(--m);
+    font-weight: 800;
+    color: var(--textoNaranja);
     text-decoration: none;
 }
 
@@ -327,10 +336,19 @@ span{
 
     border: 1px solid var(--blanco);
     border-radius: 20px;
+
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, .5);
+
+    transition: all 500ms;
 }
 
 .boton:visited{
     color: var(--blanco);
+}
+
+.boton:hover{
+    background-color: var(--naranja);
+    transform: scale(1.1);
 }
 
 /* Clases para la sección de instituciones */
@@ -347,6 +365,13 @@ span{
 
     filter: grayscale(1);
     opacity: .8;
+
+    transition: all 500ms;
+}
+
+#instituciones > img:hover{
+    transform: scale(1.2);
+    filter: grayscale(0);
 }
 
 /* Clase para el emblema de miembro de GBC */
