@@ -208,6 +208,7 @@ span{
     height: inherit;
 }
 
+/* Clase para todas las cajas que por defecto contienen un título y un parrafo abajo */
 .caja-descripcion{
     display: flex;
     flex-direction: column;
@@ -215,6 +216,7 @@ span{
     gap: 12px;
 }
 
+/* Clase para ajustar a la pantalla el tamaño del iframe del video */
 .caja-video{
     width: 100%;
 
@@ -222,69 +224,29 @@ span{
     justify-content: center;
 }
 
+/* Clases para una vista cómoda y responsiva para la sección de la línea histórica */
 #historia > .titulo > i{
     font-size: var(--xxxl);
     color: var(--azul);
 }
 
-/* #contenedor-fechas{
-    width: 100%;
-
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    gap: 20px;
-
-    overflow-x: auto;
-}
-
-.caja-fecha{
-    height: clamp(300px, 60vw, 400px);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 8px;
-
-    padding-right: 20px;
-    border-right: 1px solid rgb(255, 122, 1, .4);
-}
-
-.caja-fecha:last-child{
-    border-right: none;
-}
-
-.caja-fecha > .titulo{
-    padding: 8px 16px;
-    font-size: var(--xxxl);
-    font-weight: 800;
-    color: var(--textoNaranja);
-
-    border-top: 2px solid var(--textoNaranja);
-    border-bottom: 2px solid var(--textoNaranja);
-
-    border-radius: 8px;
-}
-
-.caja-fecha > .texto{
-    width: 185px;
-    font-size: var(--s);
-} */
-
 #contenedor-fechas {
     width: 100%;
+
     display: flex;
+    gap: 80px;
+
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-snap-align: center;
-    gap: 80px;
   }
   
 .caja-fecha {
     flex-shrink: 0;
-    width: 100%;
     scroll-snap-align: start;
+
+    width: 100%;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -294,6 +256,7 @@ span{
 .caja-fecha > .titulo{
     width: 200px;
     padding: 8px 16px;
+
     font-size: var(--xxxl);
     font-weight: 800;
     color: var(--textoNaranja);
@@ -309,6 +272,11 @@ span{
     font-size: var(--s);
 }
 
+#historia > .texto > i{
+    margin-left: 8px;
+}
+
+/* Clases para la sección de materiales aptos para su uso */
 .caja-bloques{
     width: 100%;
 
@@ -335,6 +303,7 @@ span{
     line-height: 16px;
 }
 
+/* Clases para la sección de ventajas en su uso */
 #XQusarlo{
     gap: 52px;
 }
@@ -383,6 +352,7 @@ span{
     width: var(--xxxl);
 }
 
+/* Clases para el botón del hipervínculo hacia Pruebas Técnicas */
 .boton{
     margin-top: 12px;
     padding: 12px;
@@ -411,14 +381,30 @@ span{
     transform: scale(1.1);
 }
 
-.pregunta{
+/* Clases para las sección FAQ */
+.lista-preguntas{
+    list-style: none;
+}
+
+.caja-pregunta{
     width: 100%;
     padding: 32px 0;
 
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.caja-pregunta:last-child{
+    padding-bottom: 0;
+}
+
+.pregunta{
+    margin-bottom: 20px;
+
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 
 .pregunta > .texto{
@@ -427,11 +413,83 @@ span{
     text-align: start;
 }
 
-.pregunta > i{
+.pregunta >  i{
     padding: 8px;
 
     font-size: var(--l);
     color: var(--textoNaranja);
+}
+
+.respuesta{
+    text-align: start;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: 500ms;
+    overflow-y: auto;
+}
+
+.caja-pregunta > .pregunta > i{
+    transition: all 500ms;
+    transform: rotate(0deg);
+}
+
+.activo > .pregunta > i{
+    transition: all 500ms;
+    transform: rotate(90deg);
+}
+
+.activo > .respuesta{
+    max-height: 3000px;
+}
+
+/* Clases para la sección de contactos para mas dudas */
+#enlace{
+    text-decoration: none;
+    transition: all 500ms;
+}
+
+#enlace:visited {
+    color: var(--textoNaranja);
+}
+
+#enlace:hover{
+    transform: scale(1.1);
+    font-size: var(--xxl);
+    font-weight: 700;
+}
+
+.contactos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+.cajita-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cajita-contacto > i{
+    font-size: var(--xxl);
+    color: var(--azul);
+}
+
+.cajita-contacto > p:first-of-type{
+    font-weight: 700;
+}
+
+.cajita-contacto > a{
+    font-weight: 400;
+    color: var(--textoAzul);
+    text-decoration: none;
+}
+
+.cajita-contacto > a:visited{
+    color: var(--textoAzul);
 }
 
 /* Clases para dar estilo al footer general de la página */
