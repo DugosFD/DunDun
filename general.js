@@ -23,8 +23,3 @@ botonMenu.addEventListener("click", (e) =>{
         document.querySelector(".fondo-negro").style.opacity="0";
       }
 })
-
-function cerrarPopUp(){
-  document.querySelector("#caja-negra-ABNT").style.display="none";
-  document.body.style.overflow="auto";
-}

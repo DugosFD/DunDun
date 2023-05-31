@@ -374,6 +374,29 @@ span{
     transform: scale(1.1);
 }
 
+.pregunta{
+    width: 100%;
+    padding: 32px 0;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pregunta > .texto{
+    width: 80%;
+
+    text-align: start;
+}
+
+.pregunta > i{
+    padding: 8px;
+
+    font-size: var(--l);
+    color: var(--textoNaranja);
+}
+
 /* Clases para dar estilo al footer general de la página */
 #footer{
     padding-bottom: 4px;
