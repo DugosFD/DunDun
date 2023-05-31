@@ -239,7 +239,7 @@ span{
 }
 
 .caja-fecha{
-    height: 310px;
+    height: clamp(300px, 60vw, 400px);
 
     display: flex;
     flex-direction: column;
@@ -298,17 +298,19 @@ span{
     line-height: 16px;
 }
 
-.caja-img{
-    width: 100%;
+#XQusarlo{
+    gap: 52px;
+}
 
+.caja-ventaja{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 16px;
 }
 
-.caja-img > img{
-    width: 100%;
+.caja-ventaja > img{
+    width: clamp(200px, 80%, 600px);
 }
 
 .info{
@@ -344,17 +346,8 @@ span{
     width: var(--xxxl);
 }
 
-.caja-pruebas{
-    border-top: 1px solid rgba(128, 128, 128, 0.4);
-}
-
-.caja-pruebas > .texto{
-    font-weight: 600;
-    color: var(--azul);
-}
-
 .boton{
-    margin-top: 28px;
+    margin-top: 12px;
     padding: 12px;
 
     font-size: var(--s);
@@ -408,10 +401,10 @@ span{
 }
 
 .caja-contacto, .caja-redes{
-    width: 200px;
+    width: clamp(200px, 50vw, 300px);
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     gap: 12px;
 }
 
