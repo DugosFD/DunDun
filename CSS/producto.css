@@ -423,24 +423,24 @@ span{
 .respuesta{
     text-align: start;
 
-    max-height: 0;
+    height: 0;
     overflow: hidden;
-    transition: 1500ms;
+    transition: 500ms;
     overflow-y: auto;
 }
 
 .caja-pregunta > .pregunta > i{
-    transition: all 1500ms;
-    transform: rotate(360deg);
+    transition: all 500ms;
+    transform: rotate(0deg);
 }
 
 .activo > .pregunta > i{
     transition: all 500ms;
-    transform: rotate(90deg);
+    transform: rotate(45deg);
 }
 
 .activo > .respuesta{
-    max-height: 3000px;
+    height: 310px;
 }
 
 /* Clases para la sección de contactos para mas dudas */
