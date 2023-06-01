@@ -425,13 +425,13 @@ span{
 
     max-height: 0;
     overflow: hidden;
-    transition: 500ms;
+    transition: 1500ms;
     overflow-y: auto;
 }
 
 .caja-pregunta > .pregunta > i{
-    transition: all 500ms;
-    transform: rotate(0deg);
+    transition: all 1500ms;
+    transform: rotate(360deg);
 }
 
 .activo > .pregunta > i{
