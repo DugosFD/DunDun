@@ -126,6 +126,8 @@ span{
     font-size: var(--s);
     color: var(--blanco);
     margin-bottom: 12px;
+
+    cursor: pointer;
 }
 
 .boton-cerrar{
