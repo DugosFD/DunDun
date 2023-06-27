@@ -208,6 +208,20 @@ span{
     height: inherit;
 }
 
+/* Clases para la seccion de tipos de pruebas, con su información y gráfcos */
+.caja-descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#bball{
+    width: 40px;
+}
+
+
+
 /* Clases para dar estilo al footer general de la página */
 #footer{
     padding-bottom: 4px;
