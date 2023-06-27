@@ -381,6 +381,11 @@ span{
     transform: scale(1.1);
 }
 
+/* estilo para la visualización correcta del mapa de América */
+#mapa{
+    width: 100vw;
+}
+
 /* Clases para las sección FAQ */
 .lista-preguntas{
     list-style: none;
@@ -447,6 +452,7 @@ span{
 #enlace{
     text-decoration: none;
     transition: all 500ms;
+    color: var(--textoNaranja);
 }
 
 #enlace:visited {
