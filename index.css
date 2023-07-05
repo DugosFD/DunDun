@@ -328,6 +328,11 @@ span{
     font-style: italic;
 }
 
+.video-youtube{
+    width: 95vw;
+    margin: 28px 0 0px 0;
+}
+
 .boton{
     margin-top: 28px;
     padding: 12px;
