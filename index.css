@@ -133,6 +133,8 @@ span{
 .boton-cerrar{
     width: clamp(25px, 6%, 35px);
     margin: 0 0 12px 12px;
+
+    cursor: pointer;
 }
 
 #ABNT{

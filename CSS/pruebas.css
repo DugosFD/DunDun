@@ -208,7 +208,7 @@ span{
     height: inherit;
 }
 
-/* Clases para la seccion de tipos de pruebas, con su información y gráfcos */
+/* Clases para la seccion de tipos de pruebas con su información*/
 .caja-descripcion{
     display: flex;
     flex-direction: column;
@@ -216,11 +216,59 @@ span{
     gap: 12px;
 }
 
-#bball{
-    width: 40px;
+.separacion{
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+#bball, #fuego{
+    width: 60px;
+    height: 50px;
+    filter: grayscale(1);
+}
 
+.resultados{
+    font-weight: 700;
+    color: var(--azul);
+}
+
+.caja-resultados{
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 32px;
+}
+
+.bloque{
+    width: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.bloque > img{
+    width: 70px;
+}
+
+.bloque > .texto{
+    font-weight: 500;
+    color: rgba(0, 0, 0);
+}
+
+.bloque > div > span{
+    font-size: var(--xxl);
+    font-weight: 800;
+    color: var(--azul);
+}
+
+.italica{
+    font-size: var(--s);
+    font-weight: 600;
+    font-style: italic;
+}
 
 /* Clases para dar estilo al footer general de la página */
 #footer{
