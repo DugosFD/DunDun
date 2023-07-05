@@ -329,7 +329,7 @@ span{
 }
 
 .video-youtube{
-    width: 95vw;
+    width: clamp(270px, 95vw, 550px);
     margin: 28px 0 0px 0;
 }
 
