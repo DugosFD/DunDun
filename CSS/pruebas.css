@@ -221,15 +221,20 @@ span{
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-#bball, #fuego{
+#bball, #fuego, #sonido, #agua{
     width: 60px;
     height: 50px;
     filter: grayscale(1);
 }
 
+#sonido{
+    filter: contrast(.1);
+}
+
 .resultados{
+    font-size: var(--l);
     font-weight: 700;
-    color: var(--azul);
+    color: rgba(0, 0, 0);
 }
 
 .caja-resultados{
@@ -258,16 +263,22 @@ span{
     color: rgba(0, 0, 0);
 }
 
-.bloque > div > span{
-    font-size: var(--xxl);
+.caja-resultados span{
     font-weight: 800;
     color: var(--azul);
 }
 
 .italica{
-    font-size: var(--s);
-    font-weight: 600;
+    font-size: var(--m);
+    font-weight: 700;
     font-style: italic;
+    color: var(--naranja);
+}
+
+.bloque > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Clases para dar estilo al footer general de la página */
