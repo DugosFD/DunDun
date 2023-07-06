@@ -208,7 +208,7 @@ span{
     height: inherit;
 }
 
-/* Clases para la seccion de tipos de pruebas con su información*/
+/* Clases para la seccion de tipos de pruebas con su información y resultados*/
 .caja-descripcion{
     display: flex;
     flex-direction: column;
@@ -221,7 +221,7 @@ span{
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-#bball, #fuego, #sonido, #agua{
+#bball, #fuego, #sonido, #agua, #complemento{
     width: 60px;
     height: 50px;
     filter: grayscale(1);
@@ -279,6 +279,28 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#durabilidad > div, #complementarios > div{
+    margin: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#durabilidad h3, #complementarios h3{
+    font-size: var(--l);
+    font-weight: 800;
+}
+
+#durabilidad h2{
+    font-size: var(--xxl);
+}
+
+#camara-climatica{
+    width: clamp(200px, 60vw, 400px);
 }
 
 /* Clases para dar estilo al footer general de la página */
